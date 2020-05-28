@@ -1,0 +1,95 @@
+html {
+  font-family: "Nunito";
+
+  --bg: #212326;
+  --board-bg: #3a3d42;
+  --board-border: #fd951f11;
+  --board-hlight-ext: #fd951f08;
+  --board-hlight-int: #4cd13711;
+  --card-bg: #7a7a7a30;
+  --card-shadow: #282a36;
+  --color-headings: #ff79c6;
+  --color-text: #f8f8f2;
+  --color-st: gray;
+  --color-st-green: #50fa7b;
+  --color-st-blue: #8be9fd;
+  --color-st-red: #ff5555;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--color-text);
+}
+
+.boards {
+  display: flex;
+  margin-top: 32px;
+}
+
+.board {
+  background: var(--board-bg);
+  border: 1px solid var(--board-border);
+  border-radius: 4px;
+  margin: 0 16px;
+}
+
+.board h3 {
+  color: var(--color-headings);
+  margin: 0;
+  padding: 16px;
+}
+
+.dropzone {
+  min-height: 200px;
+  min-width: 282px;
+  padding: 16px;
+}
+
+.card {
+  background-color: var(--card-bg);
+  border-radius: 4px;
+  box-shadow: 2px 2px 4px -1px var(--card-shadow);
+  font-size: 18px;
+  font-weight: 600;
+  margin: 25px 0;
+  padding: 16px;
+  width: 250px;
+}
+
+.status {
+  background: var(--color-st);
+  border-radius: 8px;
+  height: 8px;
+  margin-bottom: 16px;
+  width: 30px;
+}
+
+.status.green {
+  background: var(--color-st-green);
+}
+
+.status.blue {
+  background: var(--color-st-blue);
+}
+
+.status.red {
+  background: var(--color-st-red);
+}
+
+.highlight {
+  background-color: var(--board-hlight-ext);
+}
+
+.card,
+.dropzone {
+  transition: 0.4s;
+}
+
+.is-dragging {
+  cursor: move;
+  opacity: 0.3;
+}
+
+.over {
+  background-color: var(--board-hlight-int);
+}
